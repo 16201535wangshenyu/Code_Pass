@@ -1,0 +1,248 @@
+{"CompilationUnit": {"TypeDeclaration": [
+   {
+      "MethodDeclaration": {
+         "SingleVariableDeclaration": {
+            "ArrayType": "String[]",
+            "SimpleName": "args"
+         },
+         "SimpleName": "main",
+         "Block": {
+            "ExpressionStatement": {"MethodInvocation": {
+               "ClassInstanceCreation": {"SimpleType": {"SimpleName": "Sortbygrade"}},
+               "SimpleName": [
+                  "Collections",
+                  "sort",
+                  "lt"
+               ]
+            }},
+            "VariableDeclarationStatement": {
+               "ParameterizedType": "LinkedList<Student>",
+               "VariableDeclarationFragment": "lt=new LinkedList<Student>()"
+            },
+            "EnhancedForStatement": {
+               "SingleVariableDeclaration": {
+                  "SimpleType": {"SimpleName": "Student"},
+                  "SimpleName": "sd"
+               },
+               "SimpleName": "lt",
+               "ExpressionStatement": {"MethodInvocation": {
+                  "QualifiedName": {"SimpleName": [
+                     "System",
+                     "out"
+                  ]},
+                  "SimpleName": [
+                     "println",
+                     "sd"
+                  ]
+               }}
+            },
+            "ForStatement": {
+               "VariableDeclarationExpression": {
+                  "VariableDeclarationFragment": [
+                     "i=20070301",
+                     "j=10"
+                  ],
+                  "PrimitiveType": "int"
+               },
+               "InfixExpression": {
+                  "SimpleName": "i",
+                  "NumberLiteral": 20070330
+               },
+               "Block": {"ExpressionStatement": {"MethodInvocation": {
+                  "ClassInstanceCreation": {
+                     "SimpleType": {"SimpleName": "Student"},
+                     "SimpleName": "i",
+                     "InfixExpression": {
+                        "StringLiteral": "\"同学\"",
+                        "SimpleName": "j"
+                     },
+                     "CastExpression": {
+                        "ParenthesizedExpression": {"InfixExpression": {
+                           "InfixExpression": {
+                              "MethodInvocation": {"SimpleName": [
+                                 "Math",
+                                 "random"
+                              ]},
+                              "NumberLiteral": 40
+                           },
+                           "NumberLiteral": 60
+                        }},
+                        "PrimitiveType": "int"
+                     }
+                  },
+                  "SimpleName": [
+                     "lt",
+                     "add"
+                  ]
+               }}},
+               "PostfixExpression": [
+                  {"SimpleName": "i"},
+                  {"SimpleName": "j"}
+               ]
+            }
+         },
+         "PrimitiveType": "void"
+      },
+      "SimpleName": "Stu"
+   },
+   {
+      "MethodDeclaration": [
+         {
+            "SingleVariableDeclaration": [
+               {
+                  "SimpleName": "num",
+                  "PrimitiveType": "int"
+               },
+               {
+                  "SimpleName": "grade",
+                  "PrimitiveType": "int"
+               },
+               {
+                  "SimpleType": {"SimpleName": "String"},
+                  "SimpleName": "name"
+               }
+            ],
+            "SimpleName": "Student",
+            "Block": {"ExpressionStatement": [
+               {"Assignment": {
+                  "SimpleName": "num",
+                  "FieldAccess": {
+                     "ThisExpression": "this",
+                     "SimpleName": "num"
+                  }
+               }},
+               {"Assignment": {
+                  "SimpleName": "name",
+                  "FieldAccess": {
+                     "ThisExpression": "this",
+                     "SimpleName": "name"
+                  }
+               }},
+               {"Assignment": {
+                  "SimpleName": "grade",
+                  "FieldAccess": {
+                     "ThisExpression": "this",
+                     "SimpleName": "grade"
+                  }
+               }}
+            ]}
+         },
+         {
+            "SimpleType": {"SimpleName": "String"},
+            "SimpleName": "toString",
+            "Block": {"ReturnStatement": {"InfixExpression": {
+               "StringLiteral": [
+                  "\"学号：\"",
+                  "\"\\t\"",
+                  "\"姓名:\"",
+                  "\"    \"",
+                  "\"成绩:\""
+               ],
+               "FieldAccess": [
+                  {
+                     "ThisExpression": "this",
+                     "SimpleName": "num"
+                  },
+                  {
+                     "ThisExpression": "this",
+                     "SimpleName": "name"
+                  },
+                  {
+                     "ThisExpression": "this",
+                     "SimpleName": "grade"
+                  }
+               ]
+            }}}
+         }
+      ],
+      "SimpleName": "Student",
+      "FieldDeclaration": [
+         {
+            "VariableDeclarationFragment": [
+               "num",
+               "grade"
+            ],
+            "PrimitiveType": "int"
+         },
+         {
+            "SimpleType": {"SimpleName": "String"},
+            "VariableDeclarationFragment": "name"
+         }
+      ]
+   },
+   {
+      "ParameterizedType": "Comparator<Student>",
+      "MethodDeclaration": {
+         "MarkerAnnotation": {"SimpleName": "Override"},
+         "SingleVariableDeclaration": [
+            {
+               "SimpleType": {"SimpleName": "Student"},
+               "SimpleName": "s1"
+            },
+            {
+               "SimpleType": {"SimpleName": "Student"},
+               "SimpleName": "s2"
+            }
+         ],
+         "SimpleName": "compare",
+         "Block": {
+            "IfStatement": [
+               {
+                  "InfixExpression": {"QualifiedName": [
+                     {"SimpleName": [
+                        "s1",
+                        "grade"
+                     ]},
+                     {"SimpleName": [
+                        "s2",
+                        "grade"
+                     ]}
+                  ]},
+                  "ReturnStatement": {"NumberLiteral": 1}
+               },
+               {
+                  "InfixExpression": {"QualifiedName": [
+                     {"SimpleName": [
+                        "s1",
+                        "grade"
+                     ]},
+                     {"SimpleName": [
+                        "s2",
+                        "grade"
+                     ]}
+                  ]},
+                  "ReturnStatement": {"PrefixExpression": {"NumberLiteral": 1}}
+               },
+               {
+                  "InfixExpression": {"QualifiedName": [
+                     {"SimpleName": [
+                        "s1",
+                        "grade"
+                     ]},
+                     {"SimpleName": [
+                        "s2",
+                        "grade"
+                     ]}
+                  ]},
+                  "ReturnStatement": {"MethodInvocation": {
+                     "QualifiedName": [
+                        {"SimpleName": [
+                           "s1",
+                           "name"
+                        ]},
+                        {"SimpleName": [
+                           "s2",
+                           "name"
+                        ]}
+                     ],
+                     "SimpleName": "compareTo"
+                  }}
+               }
+            ],
+            "ReturnStatement": {"NumberLiteral": 0}
+         },
+         "PrimitiveType": "int"
+      },
+      "SimpleName": "Sortbygrade"
+   }
+]}}

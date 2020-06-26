@@ -1,0 +1,150 @@
+POST http://localhost:8080/code_pass/login
+Accept: */*
+Cache-Control: no-cache
+{:
+   "username": "16201535",
+  "password": "123"
+}:
+
+<> 2020-04-11T044829.404.html
+
+###
+
+POST http://localhost:8080/code_pass/login
+Accept: */*
+Cache-Control: no-cache
+{:
+   "username": "16201535",
+  "password": "123"
+}:
+
+<> 2020-04-11T044458.500.html
+
+###
+
+POST http://localhost:8080/code_pass/login?username=16201535&password=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T044146.500.html
+
+###
+
+POST http://localhost:8080/code_pass/login?username=16201535&password=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T044103.500.html
+
+###
+
+GET http://localhost:8080/code_pass/verifyCode
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T124236.200.json
+
+###
+
+GET http://localhost:8080/code_pass/verifyCode
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T120829.200.txt
+
+###
+
+GET http://localhost:8080/code_pass/verifyCode
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T120655.200.txt
+
+###
+
+GET http://localhost:8080/code_pass/verifyCode
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T120617.200.txt
+
+###
+
+GET http://localhost:8080/code_pass/verifyCode
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T120355.200.txt
+
+###
+
+GET http://localhost:8000/code_pass/verifyCode
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/code_pass/verifyCode
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T124524.200.txt
+
+###
+
+GET http://localhost:8000/code_pass/home
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T124516.200.html
+
+###
+
+GET http://localhost:8000/admin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T124458.200.html
+
+###
+
+GET http://localhost:8080/admin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T124409.200.html
+
+###
+
+GET http://localhost:8080/admin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T124404.200.html
+
+###
+
+GET http://localhost:8080/code_pass/home
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T124231.200.html
+
+###
+
+GET http://localhost:8080/code_pass/verifyCode
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T124134.200.html
+
+###
+
+GET http://localhost:8080/code_pass
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-11T123658.200.html
+
+###
+

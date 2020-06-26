@@ -1,0 +1,36 @@
+#文件解压
+def unzip_file(dir_path,unzip_path):
+    # 解压缩后文件的存放路径
+    unzip_file_path = unzip_path
+        # r"G:\python-study\test6\static\CodePass\file\unzip_file"
+        # settings.UPLOAD_UNZIP_FILE_DIR
+    # 找到压缩文件夹
+    dir_list = glob.glob(dir_path)
+    if dir_list:
+        # 循环zip文件夹
+        for dir_zip in dir_list:
+            # 以读的方式打开
+            with zipfile.ZipFile(dir_zip, 'r') as f:
+                for file in f.namelist():
+                    f.extract(file, path=unzip_file_path)
+                    # if file.
+                    if file.endswith(".zip"):
+                        print(file)
+                        unzip_file(file,os.path.join(unzip_path,file.split("/")[-2],os.path.basename(file).rstrip(".zip")))
+                    # print(file)
+            os.remove(dir_zip)
+    change_name(unzip_path)
+
+def change_name(filename):
+    os.chdir(filename)
+    for i in os.listdir("."):
+        try:
+            test_name = i.encode("cp437")
+            test_name = test_name.decode("gbk")  # 将文件名转为gbk中文编码
+            os.rename(i, test_name)  # 重命名
+            i = test_name
+        except:
+            pass
+        if os.path.isdir(i):  # 如果解压后的是一个文件夹
+            change_name(i)
+            os.chdir('..')
